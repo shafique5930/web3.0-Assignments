@@ -84,7 +84,6 @@ let discounted = (sum * 5) / 100;
 if (sum > 100) {
     sum = sum - discounted;
 }
-let number = 100 - (100 * 5) / 100;
 console.log(shoppingCart);
 console.log(`Total Items: ${grandTotal.length} Item(s)\nGrand Total: Rs ${sum}.00\nTotal Discout: Rs ${discounted}`);
 const checkOut = await inquirer.prompt([
@@ -169,7 +168,14 @@ console.log(myVegetables);
 console.log(newArr);
 console.log("slice");
 // Slice is basically used to extract some infromation from an array without modifying the original Array
-const mystudents = ["Fahad", "Abdullah", "Rohan", "Irum", "Sana", "Komal"];
+const mystudents = [
+    "Fahad",
+    "Abdullah",
+    "Rohan",
+    "Irum",
+    "Sana",
+    "Komal",
+];
 // it accepts 3x arguments, start, end and string,
 let sliced = mystudents.slice(2);
 let firstTwosliced = mystudents.slice(0, 2);

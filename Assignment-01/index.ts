@@ -87,7 +87,6 @@ let discounted: number = (sum * 5) / 100;
 if (sum > 100) {
   sum = sum - discounted;
 }
-let number = 100 - (100 * 5) / 100;
 console.log(shoppingCart);
 console.log(
   `Total Items: ${grandTotal.length} Item(s)\nGrand Total: Rs ${sum}.00\nTotal Discout: Rs ${discounted}`
@@ -134,7 +133,7 @@ let calculateArea = (width: number, height: number) => {
 };
 console.log(calculateArea(5, 5));
 console.log("Scenario 4: String Reversal");
-let originalString = "Hello World";
+let originalString: string = "Hello World";
 let reverseString = (str: string) => {
   let newStr = "";
   for (let i = str.length - 1; i >= 0; i--) {
@@ -150,13 +149,13 @@ let convertCelsiusToFahrenheit = (celciusTemp: number) => {
 };
 console.log(convertCelsiusToFahrenheit(32));
 console.log("Task - 3 (Scenario 1 - Modify Array with Methods");
-const myFruitsArray = ["apples", "banana", "oranges"];
+const myFruitsArray: any[] = ["apples", "banana", "oranges"];
 console.log(myFruitsArray);
 myFruitsArray.push("kiwi", "pineapple");
 console.log(myFruitsArray);
 myFruitsArray.pop();
 console.log(myFruitsArray);
-let fruitsfirstitem = myFruitsArray.shift();
+let fruitsfirstitem: any[] = myFruitsArray.shift();
 console.log(fruitsfirstitem);
 console.log(myFruitsArray);
 myFruitsArray.unshift("grapes");
@@ -165,17 +164,24 @@ console.log(myFruitsArray);
 console.log("Task - 3 (Scenario 2 - Subarray Creation");
 // Splice & Slice Methods
 console.log("splice & slice methods");
-let myVegetables = ["tomato", "potato", "ginger", "lemon"];
+let myVegetables: any[] = ["tomato", "potato", "ginger", "lemon"];
 // Splice Method
 // Splice method basically acceps three arguments, first indiates the start of splice and the second argument to mention the index upto which we want to delete the items. Third argument is used to indicate any other items which we want to add in the original Array.
 
-let newArr = myVegetables.splice(0, 2, "chilies", "mint");
+let newArr: any[] = myVegetables.splice(0, 2, "chilies", "mint");
 // removed first two items from the Array, saved them in new Array new newArr and instead of first two items added other two items i.e. chilies and mint in the original Array
 console.log(myVegetables);
 console.log(newArr);
 console.log("slice");
 // Slice is basically used to extract some infromation from an array without modifying the original Array
-const mystudents = ["Fahad", "Abdullah", "Rohan", "Irum", "Sana", "Komal"];
+const mystudents: any[] = [
+  "Fahad",
+  "Abdullah",
+  "Rohan",
+  "Irum",
+  "Sana",
+  "Komal",
+];
 // it accepts 3x arguments, start, end and string,
 let sliced = mystudents.slice(2);
 let firstTwosliced = mystudents.slice(0, 2);
